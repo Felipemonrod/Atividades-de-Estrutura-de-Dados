@@ -25,7 +25,7 @@ class Pilha {
 
     public char pop() {
         if (topo == null) {
-            return '\0'; // Pilha vazia
+            return '\0'; 
         }
         char valor = topo.valor;
         topo = topo.proximo;
