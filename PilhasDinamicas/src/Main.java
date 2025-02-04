@@ -68,7 +68,6 @@ class FilaDinamicaImpl {
         this.ultimo = null;
     }
 
-    // Método para adicionar um elemento ao final da fila
     public void adicionar(int dado) {
         Elemento novoElemento = new Elemento(dado);
         if (estaVazia()) {
@@ -79,25 +78,22 @@ class FilaDinamicaImpl {
         ultimo = novoElemento;
     }
 
-    // Método para remover um elemento do início da fila
     public int remover() {
         if (estaVazia()) {
-            return -1; // Fila vazia
+            return -1; 
         }
         int dadoRemovido = primeiro.dado;
         primeiro = primeiro.proximo;
         if (primeiro == null) {
-            ultimo = null; // Fila ficou vazia após remover
+            ultimo = null; 
         }
         return dadoRemovido;
     }
 
-    // Método para verificar se a fila está vazia
     public boolean estaVazia() {
         return primeiro == null;
     }
 
-    // Método para exibir a fila
     public String mostrarFila() {
         if (estaVazia()) {
             return "Fila vazia!";
